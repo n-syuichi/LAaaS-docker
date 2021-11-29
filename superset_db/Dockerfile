@@ -40,7 +40,7 @@ RUN git clone https://github.com/asya999/yam_fdw.git && \
 
 # Prepare init scripts
 USER postgres
-ENV PGDATA /var/lib/pgsql/9.6/data
+ENV PGDATA /var/lib/postgresql/data
 COPY --chown=postgres:postgres \
   entrypoint.sh pg_hba.conf postgresql.conf setup.sql /init/
 RUN chmod 755 /init/entrypoint.sh

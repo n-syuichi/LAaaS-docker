@@ -95,7 +95,7 @@ services:
     ports:
       - "5433:5432"
     volumes:
-      - ./superset_db/data:/var/lib/pgsql/9.6/data
+      - ./superset_db/data:/var/lib/postgresql/data
     user: postgres
   jupyterhub:
     build: jupyterhub
